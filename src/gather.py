@@ -11,8 +11,9 @@ git-synced like the rest of the database (see db_sync.py), so it
 survives the gap between the cloud run that fills it and the local run
 that empties it.
 
-Run manually with `python gather.py`; it needs the same .env / secrets as
-main.py (notion_key, database, gemini_key, webster_key).
+Run manually with `python src/gather.py` (from the repo root); it needs
+the same .env / secrets as main.py (notion_key, database, gemini_key,
+webster_key).
 """
 from pipeline import run_gather
 import db_sync

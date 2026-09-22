@@ -48,4 +48,4 @@ jobs:
           database: ${{ secrets.NOTION_DATABASE }}
           gemini_key: ${{ secrets.GEMINI_KEY }}
           webster_key: ${{ secrets.WEBSTER_KEY }}
-        run: python gather.py
+        run: python src/gather.py

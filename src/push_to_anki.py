@@ -14,8 +14,8 @@ Card type: only "Basic (and reversed card)" (Front=word, Back=definition)
 definition->word review cards. See issue #9's decision comment for why
 this was chosen over adding a separate plain "Basic" note too.
 
-Trigger: manual for v1 -- run this by hand, or double-click
-run_flashcards.bat, whenever you have Anki open. See issue #9.
+Trigger: manual -- run `python src/push_to_anki.py` (from the repo root)
+whenever you have Anki open. See issue #9.
 
 Requires: Anki running locally with the AnkiConnect add-on installed
 (listening on http://localhost:8765). The very first run may pop up an

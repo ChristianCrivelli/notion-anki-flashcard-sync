@@ -18,7 +18,9 @@ the sync step succeeds.
 import os
 import subprocess
 
-REPO_DIR = os.path.dirname(os.path.abspath(__file__))
+# This file lives in src/, but the git repo root -- and the data files in
+# SYNCED_FILES -- are one level up. See issue #12.
+REPO_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SYNCED_FILES = ["local_database.csv", "needs_notion_cleanup.csv", "pending_cards.csv"]
 
 

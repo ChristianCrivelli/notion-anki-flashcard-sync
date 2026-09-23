@@ -1,0 +1,9 @@
+# The data CSVs are written by the pipeline scripts with their own line-ending
+# conventions (csv.writer defaults to \r\n; local_database.py's raw appends use
+# plain \n) and are consistently CRLF on disk. Without this, git on a Linux
+# runner (autocrlf=input) treats them as "would be renormalized to LF" on every
+# checkout and reports them as modified even though nothing changed -- which
+# makes db_sync.py's dirty-working-tree guard skip the pull step on every
+# scheduled run. -text tells git to leave these files alone entirely: no EOL
+# conversion, no renormalization checks.
+*.csv -text
